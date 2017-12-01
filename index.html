@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Order Kopi Guide ☕️</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Coustard">
+<link rel="stylesheet" href="style.css">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="Order Kopi Guide">
+<meta name="twitter:url" property="og:url" content="https://kopi.guide">
+<meta name="twitter:title" property="og:title" content="Order Kopi Guide">
+<meta name="twitter:description" property="og:description" content="A helpful guide on how to order Kopi in Singapore and some say Malaysia too.">
+<meta name="twitter:image" property="og:image" content="/og.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1040">
+<meta property="og:image:height" content="680">
+<header>
+  <h1>Order Kopi Guide</h1>
+  <p>A helpful guide on how to order Kopi in Singapore and some say Malaysia&nbsp;too.</p>
+</header>
+<section class="container" id="what-kopi">
+  <h2>What is Kopi?</h2>
+  <blockquote>
+    <p>The word <b>kopi</b> is a Malay/Hokkien term for&nbsp;coffee.</p>
+    <footer>— <a href="https://en.wikipedia.org/wiki/Kopi_tiam">Wikipedia: Kopi&nbsp;tiam</a></footer>
+  </blockquote>
+  <blockquote>
+    <p><b>Kopi</b> is a dark and full bodied brew, less bitter (and, you could argue, more aromatic) than Vietnamese versions, but with the same subtle caramel-sweetness that comes from canned condensed or evaporated&nbsp;milk.</p>
+    <footer>— <a href="http://drinks.seriouseats.com/2012/08/snapshots-from-singapore-a-guide-to-singaporean-coffee-kop-how-to-order-how-its-made.html">Snapshots from Singapore: A Guide to Singaporean&nbsp;Coffee</a></footer>
+  </blockquote>
+  <p>There is a whole range of Kopi terms and variations. You can customize them to your liking, such as type of milk, sweetness level and coffee&nbsp;strength.</p>
+</section>
+<section id="kopi-variations">
+  <ul id="kopi-legend" title="Legend">
+    <li class="sugar">Sugar</li>
+    <li class="water">Water</li>
+    <li class="condensed_milk">Condensed milk</li>
+    <li class="evaporated_milk">Evaporated milk</li>
+    <li class="coffee">Coffee</li>
+    <li class="state">
+      <label><input type="radio" name="kopi_state" id="kopi-state-1" value="warm" checked> Warm</label>
+      <label><input type="radio" name="kopi_state" id="kopi-state-2" value="lukewarm"> Lukewarm</label>
+      <label><input type="radio" name="kopi_state" id="kopi-state-3" value="iced"> Iced</label>
+    </li>
+  </ul>
+  <ul id="kopi-list">
+    <li>Kopi</li>
+    <li>Kopi O</li>
+    <li>Kopi C</li>
+    <li>Kopi Gah Dai</li>
+    <li>Kopi Siu Dai</li>
+    <li>Kopi Po</li>
+    <li>Kopi Gau</li>
+    <li>Kopi Di Lo</li>
+    <li>Kopi O Kosong</li>
+    <li>Kopi C Kosong</li>
+    <li>Kopi O Gah Dai</li>
+    <li>Kopi C Gah Dai</li>
+    <li>Kopi O Siu Dai</li>
+    <li>Kopi C Siu Dai</li>
+    <li>Kopi Po Gah Dai</li>
+    <li>Kopi Po Siu Dai</li>
+  </ul>
+</section>
+<section id="kopi-maker" class="container">
+  <h2>Kopi Maker <a href="#kopi-maker" title="Permalink to Kopi Maker">#</a></h2>
+  <p>Confused? Why not make your own Kopi?!</p>
+  <div id="maker-container">
+    <div id="maker-item"></div>
+    <div id="maker-name"></div>
+  </div>
+  <form id="maker-form">
+    <fieldset>
+      <legend>Milkiness</legend>
+      <input type="radio" name="kopi_milkiness" value="Kopi O" id="km-no-milk">
+      <label for="km-no-milk">No milk</label>
+      <input type="radio" name="kopi_milkiness" value="Kopi" id="km-condensed" checked>
+      <label for="km-condensed">Condensed milk</label>
+      <input type="radio" name="kopi_milkiness" value="Kopi C" id="km-evaporated">
+      <label for="km-evaporated">Evaporated milk</label>
+    </fieldset>
+    <fieldset>
+      <legend>Strength</legend>
+      <input type="radio" name="kopi_strength" value="Po" id="ks-weak">
+      <label for="ks-weak">Weak</label>
+      <input type="radio" name="kopi_strength" value="" id="ks-normal-2" checked>
+      <label for="ks-normal-2">Normal</label>
+      <input type="radio" name="kopi_strength" value="Gau" id="ks-strong">
+      <label for="ks-strong">Strong</label>
+      <input type="radio" name="kopi_strength" value="Di Lo" id="ks-stronger">
+      <label for="ks-stronger">Stronger (no water)</label>
+    </fieldset>
+    <fieldset>
+      <legend>Sweetness</legend>
+      <input type="radio" name="kopi_sweetness" value="Kosong" id="ks-no-sugar">
+      <label for="ks-no-sugar">No sugar</label>
+      <input type="radio" name="kopi_sweetness" value="Siu Dai" id="ks-less-sweet">
+      <label for="ks-less-sweet">Less sweet</label>
+      <input type="radio" name="kopi_sweetness" value="" id="ks-normal-1" checked>
+      <label for="ks-normal-1">Normal</label>
+      <input type="radio" name="kopi_sweetness" value="Gah Dai" id="ks-sweeter">
+      <label for="ks-sweeter">Sweeter</label>
+    </fieldset>
+    <fieldset>
+      <legend>State</legend>
+      <input type="radio" name="kopi_state" value="" id="ks-warm" checked>
+      <label for="ks-warm">Warm</label>
+      <input type="radio" name="kopi_state" value="Pua Sio" id="ks-lukewarm">
+      <label for="ks-lukewarm">Lukewarm</label>
+      <input type="radio" name="kopi_state" value="Peng" id="ks-iced">
+      <label for="ks-iced">Iced</label>
+    </fieldset>
+  </form>
+</section>
+<section class="container">
+  <p>There're a few articles written by people to teach how to order Kopi (and other drinks):</p>
+  <ul>
+    <li><a href="http://www.mrbrown.com/blog/2011/11/how-to-order-kopi-like-a-pro.html">mrbrown.com: How to order Kopi like a pro</a></li>
+    <li><a href="http://sethlui.com/secret-kopitiam-codewords-singapore/">23 Secret Kopitiam Codewords to Order Drinks Like a True Singaporean</a></li>
+    <li><a href="http://www.angmohdan.com/how-to-order-kopi/">How to Order Kopi. Your one-stop infographic for ordering coffee in Singapore.</a></li>
+    <li><a href="http://www.sbs.com.au/food/article/2017/01/20/how-order-kopi-singaporean-local">SBS Food: How to order kopi like a Singaporean local </a></li>
+    <li><i>...and more</i></li>
+  </ul>
+  <p>There has been similar attempts to visualize all the variants of Kopi too.</p>
+  <ul>
+    <li><a href="https://nazroll.com/orderlikemalaysian.html">How to Order Like a Malaysian</a></li>
+    <li><a href="http://static.swarm.is/kopi/">132 Ways to Kopi</a></li>
+    <li><a href="https://play.google.com/store/apps/details?id=com.thoughtmonkeys.kopitiam">Kopi (Android app)</a></li>
+    <li><a href="https://itunes.apple.com/sg/app/kopi-c/id515188038?mt=8">Kopi C (iOS app)</a></li>
+    <li><a href="https://github.com/cheeaun/kopi.guide/issues"><i>Add yours?</i></a></li>
+  </ul>
+  <p>This site was previously a sub-section of <a href="https://kopijs.org">kopijs.org</a>, now <a href="https://github.com/cheeaun/kopi.guide">open-sourced</a> &amp; maintained by <a href="https://twitter.com/cheeaun">@cheeaun</a>.</p>
+</section>
+<script src="kopi.min.js"></script>
+<script>
+(function(){
+  var $kopiList = document.getElementById('kopi-list');
+  var $kopis = $kopiList.getElementsByTagName('li');
+  var $kopiState1 = document.getElementById('kopi-state-1');
+  var $kopiState2 = document.getElementById('kopi-state-2');
+  var $kopiState3 = document.getElementById('kopi-state-3');
+
+  var checkState = function(){
+    $kopiList.classList.toggle('warm', $kopiState1.checked);
+    $kopiList.classList.toggle('lukewarm', $kopiState2.checked);
+    $kopiList.classList.toggle('iced', $kopiState3.checked);
+  };
+  checkState();
+  setTimeout(checkState, 1000);
+  $kopiState1.addEventListener('change', checkState, false);
+  $kopiState2.addEventListener('change', checkState, false);
+  $kopiState3.addEventListener('change', checkState, false);
+
+  for (var i=0, l=$kopis.length; i<l; i++){
+    var $kopi = $kopis[i];
+    var name = $kopi.textContent;
+    $kopi.innerHTML = makeKopi(name);
+  }
+
+  function makeKopi(name){
+    // Magic happens from Kopi.js
+    var ingredients = Kopi.parse(name);
+
+    // Configure the internal ingredients of the Kopi
+    var internalIngredients = 'water condensed_milk evaporated_milk coffee'.split(' ');
+    var internalIngredientsHTML = internalIngredients.map(function(ingredient){
+      var value = ingredients[ingredient];
+      if (!value) return;
+      var height = value * 100 + '%';
+      return '<div class="' + ingredient + '" style="height: ' + height + '"></div>';
+    }).join('');
+
+    // Render the sugar intelligently
+    var sugarHTML = '';
+    if (ingredients.sugar > 0){
+      if (ingredients.sugar <= 0.5){
+        sugarHTML = '<div class="sugar"></div>';
+      } else if (ingredients.sugar <= 1){
+        sugarHTML = '<div class="sugar sugar-double"></div>';
+      } else {
+        sugarHTML = '<div class="sugar sugar-triple"></div>';
+      }
+    }
+
+    // Render the (random) ice(s)
+    var randDeg = function(){
+      // Returns -90 to 90 deg
+      return (Math.random()*180).toFixed() - 90;
+    };
+    var randLeft = function(){
+      // Returns 8 to 26
+      return (Math.random()*18 + 8).toFixed();
+    };
+    iceHTML = '<div class="ice-blocks">'
+        + '<div class="ice" style="transform: rotate(' + randDeg() + 'deg); -webkit-transform: rotate(' + randDeg() + 'deg); left: ' + randLeft() + 'px"></div>'
+        + '<div class="ice" style="transform: rotate(' + randDeg() + 'deg); -webkit-transform: rotate(' + randDeg() + 'deg); left: ' + randLeft() + 'px"></div>'
+        + '<div class="ice" style="transform: rotate(' + randDeg() + 'deg); -webkit-transform: rotate(' + randDeg() + 'deg); left: ' + randLeft() + 'px"></div>'
+      + '</div>';
+
+    var state = ingredients.state;
+    ingredients.state = 'lukewarm';
+    var lukewarmName = Kopi.stringify(ingredients);
+    ingredients.state = 'iced';
+    var icedName = Kopi.stringify(ingredients);
+
+    // Finally render the whole Kopi in its full glory
+    var html = '<div class="kopi kopi-' + state + '">'
+        + sugarHTML
+        + '<div class="cup">'
+          + '<div class="ingredients">' + internalIngredientsHTML + '</div>'
+          + iceHTML
+        + '</div>'
+        + '<div class="plate"></div>'
+      + '</div>'
+      + '<div class="kopi-name">'
+        + '<span class="kopi-warm-name">' + name + '</span>'
+        + '<span class="kopi-lukewarm-name">' + lukewarmName + '</span>'
+        + '<span class="kopi-iced-name">' + icedName + '</span>'
+      + '</div>';
+    return html;
+  }
+
+  // Kopi maker
+  var $makerItem = document.getElementById('maker-item');
+  var $makerForm = document.getElementById('maker-form');
+  var $makerName = document.getElementById('maker-name');
+  function renderKopi(){
+    var kopiName = ['kopi_milkiness', 'kopi_strength', 'kopi_sweetness', 'kopi_state'].map(function(name){
+      return $makerForm[name].value || $makerForm.querySelector('[name=' + name + ']:checked').value;
+    }).join(' ').trim();
+    var kopiHTML;
+    try {
+      kopiHTML = makeKopi(kopiName);
+      $makerName.innerHTML = kopiName;
+    } catch (e) {
+      kopiHTML = e.message;
+      $makerName.innerHTML = 'Kopi ???';
+    }
+    $makerItem.innerHTML = kopiHTML;
+  };
+  renderKopi();
+  $makerForm.onsubmit = $makerForm.oninput = $makerForm.onchange = function(e){
+    e.preventDefault();
+    setTimeout(renderKopi, 100);
+  }
+})();
+</script>

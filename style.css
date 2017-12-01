@@ -1,0 +1,440 @@
+body{
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+*{
+  box-sizing: border-box;
+}
+a{
+  color: #6e4228;
+  text-decoration: underline;
+}
+h1, h2, h3{
+  color: #201816;
+  font-family: 'Coustard', sans-serif;
+  font-weight: normal;
+  margin-top: 0;
+  text-shadow: 2px 2px #f7f2f0, -2px -2px #E9DDD7, 2px -2px #FFF6D7;
+}
+header, .container{
+  margin: auto;
+  padding: 1em;
+}
+header{
+  text-align: center;
+}
+header h1{
+  margin-bottom: .25em;
+  line-height: 1.05;
+  word-spacing: 999em;
+  font-size: 5em;
+}
+blockquote{
+  border-left: 2px solid #6e4228;
+  padding: 0 1em;
+  margin: 0 0 1.5em;
+}
+p{
+  margin-top: 0;
+  padding-top: 0;
+}
+
+#kopi-variations{
+  background-color: #6e4228;
+  background: linear-gradient(to bottom, #6e4228 0%, #956f5a 100%);
+}
+#kopi-legend{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  margin: 0 0 2em;
+  padding: 2em 1em;
+  word-spacing: 5px;
+  color: #fff;
+  text-align: center;
+  /*background: rgba(110, 66, 40, .9);*/
+  background: linear-gradient(to bottom, rgba(110, 66, 40, .9) 60%, rgba(110, 66, 40, .8) 80%, rgba(110, 66, 40, 0) 100%);
+  font-weight: 500;
+}
+#kopi-legend li{
+  display: inline-block;
+  line-height: 1em;
+  padding: 8px 10px 6px;
+  margin-bottom: 10px;
+  border-radius: 16px;
+  word-spacing: normal;
+  white-space: nowrap;
+}
+#kopi-legend li label{
+  margin: 0;
+  cursor: pointer;
+  padding: 0;
+}
+
+#kopi-list{
+  margin: 0;
+  padding: 0 1em;
+  text-align: center;
+  letter-spacing: 15px;
+  line-height: 150px;
+  color: #fff;
+}
+#kopi-list li{
+  display: inline-block;
+  line-height: normal;
+}
+.kopi-name{
+  text-align: center;
+  margin-top: 10px;
+  letter-spacing: normal;
+  text-shadow: 0 1px 4px #000;
+  font-weight: 500;
+}
+.kopi-warm-name,
+.kopi-lukewarm-name,
+.kopi-iced-name{
+  display: none;
+}
+.warm .kopi-warm-name,
+.lukewarm .kopi-lukewarm-name,
+.iced .kopi-iced-name{
+  display: inline;
+}
+
+.kopi{
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  z-index: 10;
+  pointer-events: none;
+}
+.kopi *,
+.kopi *:before,
+.kopi *:after{
+  -webkit-transition: .3s all;
+  transition: .3s all;
+}
+.kopi .sugar{
+  position: absolute;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  -webkit-transform: rotate(45deg) translateX(-40px);
+  transform: rotate(45deg) translateX(-40px);
+}
+.kopi .sugar-double{
+  -webkit-transform: rotate(45deg) translateX(-50px);
+  transform: rotate(45deg) translateX(-50px);
+  box-shadow: 15px 5px 0 rgba(255,255,255, 0.5);
+}
+.kopi .sugar-triple{
+  -webkit-transform: rotate(45deg) translateX(-50px);
+  transform: rotate(45deg) translateX(-50px);
+  box-shadow: 15px 5px 0 rgba(255,255,255, 0.5), 20px -10px 0 rgba(255,255,255, 0.5);
+}
+.kopi .ice-blocks{
+  position: absolute;
+  opacity: 0;
+  -webkit-transform: translateY(-100px);
+  transform: translateY(-100px);
+}
+.iced .kopi .ice-blocks,
+.kopi-iced .ice-blocks{
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+.kopi .ice{
+  position: absolute;
+  top: 10px;
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  box-shadow: 0 0 1px #ccc;
+}
+.kopi .ice+.ice{
+  top: 25px;
+}
+.kopi .ice+.ice+.ice{
+  top: 50px;
+}
+.cup{
+  box-sizing: border-box;
+  position: relative;
+  width: 70px;
+  height: 60px;
+  border-radius: 2px 0 25px 25px / 0 0 35px 35px;
+  border: 10px solid #fff;
+  border-top: 0 solid;
+  margin: 0 auto;
+}
+.iced .cup,
+.kopi-iced .cup{
+  height: 90px;
+}
+.lukewarm .cup:after,
+.warm .cup:after,
+.kopi-lukewarm .cup:after,
+.kopi-warm .cup:after{
+  content: '}}}';
+  position: absolute;
+  letter-spacing: 0;
+  margin-top: -40px;
+  margin-left: 5px;
+  font-size: 30px;
+  opacity: .5;
+  color: #fff;
+  -webkit-animation: pulse 1s ease-in-out infinite alternate;
+  animation: pulse 1s ease-in-out infinite alternate;
+}
+.lukewarm .cup:after,
+.kopi-lukewarm .cup:after{
+  content: '}}';
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+}
+.iced .cup:after{
+  content: '';
+}
+.cup:before{
+  content: '';
+  display: block;
+  box-sizing: border-box;
+  border-radius: 0 17px 17px 0;
+  border: 10px solid #fff;
+  height: 35px;
+  width: 30px;
+  right: -30px;
+  position: absolute;
+  z-index: -1;
+}
+.iced .cup:before,
+.kopi-iced .cup:before{
+  border: 10px solid #fff;
+  border-radius: 0 20px 20px 0;
+  height: 60px;
+  top: 10%;
+}
+.ingredients{
+  position: absolute;
+  top: 10%;
+  z-index: -1;
+  height: 90%;
+  width: 100%;
+}
+
+.sugar{
+  color: #201816;
+  background: rgba(255,255,255,0.5);
+}
+.ice{
+  color: #201816;
+  background: rgba(255,255,255,0.9);
+}
+.water{
+  color: #201816;
+  background: #C7E2F2;
+}
+.coffee{
+  background: #201816;
+}
+.condensed_milk{
+  color: #201816;
+  background: #E9DDD7;
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 10px,
+    rgba(0,0,0,.1) 10px,
+    rgba(0,0,0,.1) 20px
+  );
+}
+.evaporated_milk{
+  color: #201816;
+  background-color: #FFF6D7;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 10px,
+    rgba(0,0,0,.1) 10px,
+    rgba(0,0,0,.1) 20px
+  );
+}
+
+.plate{
+  background: #fff;
+  width: 110px;
+  height: 10px;
+  border-radius: 35%/100%;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.iced .plate,
+.kopi-iced .plate{
+  opacity: 0;
+  height: 0;
+}
+
+#kopi-maker{
+  background-color: #f7f2f0;
+}
+
+#kopi-maker h2 a{
+  border: 0;
+  opacity: .5;
+}
+
+#kopi-maker fieldset{
+  border: 0;
+  padding: 0;
+  margin: 0 0 1em;
+  text-align: left;
+}
+
+#kopi-maker legend{
+  text-transform: uppercase;
+  color: #666;
+  line-height: 1em;
+}
+
+#kopi-maker label{
+  display: inline-block;
+  padding: .5em 1em;
+  line-height: 1em;
+  border: 2px solid #E9DDD7;
+  background-color: #fff;
+  border-radius: 5px;
+  margin: .3em 0 0;
+  -webkit-transition: border-color .3s;
+  transition: border-color .3s;
+  cursor: pointer;
+}
+#kopi-maker label:before{
+  content: '✔ ';
+  opacity: .1;
+}
+
+#kopi-maker input[type=radio]{
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px,1px,1px,1px);
+}
+
+#kopi-maker input[type=radio]:checked + label{
+  border-color: #6e4228;
+  color: #000;
+}
+#kopi-maker input[type=radio]:checked + label:before{
+  opacity: 1;
+}
+
+#kopi-maker input[type=radio]:focus + label{
+  background-color: #e9ddd7;
+}
+
+#kopi-maker button{
+  font-weight: bold;
+  border: 0;
+  padding: .5em 1em;
+  border: 2px solid #000;
+  border-radius: 5px;
+  width: 100%;
+  background-color: #201816;
+  color: #fff;
+}
+
+#maker-container{
+  color: #fff;
+  background-color: #6e4228;
+  background: linear-gradient(to bottom, #6e4228 0%, #956f5a 100%);
+  border-radius: 5px;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+#maker-item{
+  padding-top: 50px;
+}
+
+#maker-name{
+  text-align: center;
+  color: #fff;
+  letter-spacing: normal;
+  text-shadow: 0 1px 4px #000;
+  font-weight: 500;
+}
+
+@media only screen and (min-width: 680px){
+  header h1{
+    word-spacing: 0;
+  }
+  #maker-container{
+    float: right;
+    width: 40%;
+    margin-left: 1em;
+  }
+}
+
+@media only screen and (min-width: 900px){
+  #maker-container{
+    float: none;
+    width: auto;
+    margin-left: 0;
+  }
+  body{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  header{
+    text-align: center;
+    background: linear-gradient(to right, #fff 0%, #f7f2f0 100%);
+  }
+  header h1{
+    font-size: 6em;
+  }
+  header, .container{
+    margin: 0;
+    width: 50%;
+    max-width: 600px;
+    padding: 3em;
+  }
+
+  #kopi-maker{
+    background: linear-gradient(to right, #fff 0%, #f7f2f0 100%);
+  }
+}
+
+@media only screen and (min-width: 1100px){
+  #maker-container{
+    float: right;
+    width: 40%;
+    margin-left: 1em;
+  }
+}
+
+@-webkit-keyframes pulse {
+  from {
+    opacity: .5;
+  }
+  to {
+    opacity: .2;
+  }
+}
+
+@keyframes pulse {
+  from {
+    opacity: .5;
+  }
+  to {
+    opacity: .2;
+  }
+}
